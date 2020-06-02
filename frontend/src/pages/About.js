@@ -4,17 +4,17 @@ import Collaborate from "@carbon/icons-react/lib/collaborate/32";
 
 const About = () => {
   return (
-    <div class="bx--grid">
-      <div class="bx--row">
-        <div class="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
+    <div className="bx--grid">
+      <div className="bx--row">
+        <div className="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
           <center>
             <img src="/assets/about_header.svg" alt="About" width="75%" />
           </center>
         </div>
-        <div class="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
+        <div className="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
           <br />
           <br />
-          <h2 align="center">About</h2>
+          <h2>About</h2>
           <br />
           <br />
           <h4>

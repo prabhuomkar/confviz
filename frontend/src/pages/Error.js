@@ -2,13 +2,13 @@ import React from "react";
 
 const Error = () => {
   return (
-    <div class="bx--grid">
-      <div class="bx--row">
+    <div className="bx--grid">
+      <div className="bx--row">
         <div className="bx--col">
           <center>
+            <br />
+            <br />
             <img src="/assets/error_header.svg" alt="Error" width="33%" />
-            <br />
-            <br />
             <br />
             <br />
             <h4>Some Error</h4>

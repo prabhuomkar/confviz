@@ -1,8 +1,14 @@
 import data from "./data";
 
-const validateConference = (id) =>
-  data.CONFERENCES.filter((e) => e.id === id).length > 0 ? true : false;
+const getConference = (id) => data.CONFERENCES.filter((e) => e.id === id);
+
+const getPaperTableHeaders = () => [
+  { key: "title", header: "Title" },
+  { key: "authors", header: "Authors" },
+  { key: "arxiv", header: "arXiv" },
+];
 
 export default {
-  validateConference,
+  getConference,
+  getPaperTableHeaders,
 };

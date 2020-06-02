@@ -11,14 +11,16 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from "carbon-components-react/lib/components/UIShell";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import EventDoneIcon from "@carbon/icons-react/lib/event/20";
 import EventScheduledIcon from "@carbon/icons-react/lib/event--schedule/20";
 import AboutIcon from "@carbon/icons-react/lib/information/20";
 import GitHubIcon from "@carbon/icons-react/lib/logo--github/20";
 
 const CHeader = () => {
+  const history = useHistory();
   const [isSideNavExpanded, setSideNavExpanded] = useState(false);
+  const updateIsSideNavExpanded = () => setSideNavExpanded(!isSideNavExpanded);
   return (
     <HeaderContainer
       render={() => (
@@ -28,7 +30,7 @@ const CHeader = () => {
             <HeaderMenuButton
               aria-label="Open menu"
               isCollapsible
-              onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+              onClick={updateIsSideNavExpanded}
               isActive={isSideNavExpanded}
             />
             <HeaderName element={Link} to="/" prefix="">
@@ -37,7 +39,7 @@ const CHeader = () => {
             <HeaderGlobalBar aria-label="Header Navigation">
               <HeaderGlobalAction
                 aria-label="About"
-                onClick={() => (window.location.href = "/about")}
+                onClick={() => history.push("/about")}
               >
                 <AboutIcon />
               </HeaderGlobalAction>
@@ -59,7 +61,7 @@ const CHeader = () => {
               <SideNavItems>
                 <SideNavLink
                   renderIcon={EventDoneIcon}
-                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/ICLR"
                 >
@@ -67,7 +69,7 @@ const CHeader = () => {
                 </SideNavLink>
                 <SideNavLink
                   renderIcon={EventDoneIcon}
-                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/CVPR"
                 >
@@ -75,7 +77,7 @@ const CHeader = () => {
                 </SideNavLink>
                 <SideNavLink
                   renderIcon={EventScheduledIcon}
-                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/ACL"
                 >
@@ -83,7 +85,7 @@ const CHeader = () => {
                 </SideNavLink>
                 <SideNavLink
                   renderIcon={EventScheduledIcon}
-                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/ICML"
                 >
@@ -91,7 +93,7 @@ const CHeader = () => {
                 </SideNavLink>
                 <SideNavLink
                   renderIcon={EventScheduledIcon}
-                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/EMNLP"
                 >
@@ -99,7 +101,7 @@ const CHeader = () => {
                 </SideNavLink>
                 <SideNavLink
                   renderIcon={EventScheduledIcon}
-                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/NeurIPS"
                 >

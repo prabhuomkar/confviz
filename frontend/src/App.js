@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/:conference" component={Conference} />
+          <Route exact path="/:conferenceID" component={Conference} />
         </Switch>
       </Content>
       <CFooter />
