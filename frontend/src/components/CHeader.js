@@ -11,8 +11,9 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from "carbon-components-react/lib/components/UIShell";
-import { Link, Redirect } from "react-router-dom";
-import EventIcon from "@carbon/icons-react/lib/event/20";
+import { Link } from "react-router-dom";
+import EventDoneIcon from "@carbon/icons-react/lib/event/20";
+import EventScheduledIcon from "@carbon/icons-react/lib/event--schedule/20";
 import AboutIcon from "@carbon/icons-react/lib/information/20";
 import GitHubIcon from "@carbon/icons-react/lib/logo--github/20";
 
@@ -56,22 +57,52 @@ const CHeader = () => {
               expanded={isSideNavExpanded}
             >
               <SideNavItems>
-                <SideNavLink renderIcon={EventIcon} href="/ICLR">
+                <SideNavLink
+                  renderIcon={EventDoneIcon}
+                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  element={Link}
+                  to="/ICLR"
+                >
                   ICLR
                 </SideNavLink>
-                <SideNavLink renderIcon={EventIcon} href="/CVPR">
+                <SideNavLink
+                  renderIcon={EventDoneIcon}
+                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  element={Link}
+                  to="/CVPR"
+                >
                   CVPR
                 </SideNavLink>
-                <SideNavLink renderIcon={EventIcon} href="/ACL">
+                <SideNavLink
+                  renderIcon={EventScheduledIcon}
+                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  element={Link}
+                  to="/ACL"
+                >
                   ACL
                 </SideNavLink>
-                <SideNavLink renderIcon={EventIcon} href="/ICML">
+                <SideNavLink
+                  renderIcon={EventScheduledIcon}
+                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  element={Link}
+                  to="/ICML"
+                >
                   ICML
                 </SideNavLink>
-                <SideNavLink renderIcon={EventIcon} href="/EMNLP">
+                <SideNavLink
+                  renderIcon={EventScheduledIcon}
+                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  element={Link}
+                  to="/EMNLP"
+                >
                   EMNLP
                 </SideNavLink>
-                <SideNavLink renderIcon={EventIcon} href="/NeurIPS">
+                <SideNavLink
+                  renderIcon={EventScheduledIcon}
+                  onClick={() => setSideNavExpanded(!isSideNavExpanded)}
+                  element={Link}
+                  to="/NeurIPS"
+                >
                   NeurIPS
                 </SideNavLink>
               </SideNavItems>

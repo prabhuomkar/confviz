@@ -1,5 +1,5 @@
 # conference-viz
-Statistics and Paper Links of Machine Learning Conferences 
+Statistics, Paper Links and Visualizations of Machine Learning Conferences 
 
 ## Conferences
 | Name | Website | When |
