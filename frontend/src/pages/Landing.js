@@ -3,7 +3,7 @@ import { InlineNotification } from "carbon-components-react";
 
 const Landing = () => {
   return (
-    <div className="bx--grid">
+    <div className="bx--grid bx--grid--condensed">
       <div className="bx--row" style={{ justifyContent: "center" }}>
         <InlineNotification
           kind="info"

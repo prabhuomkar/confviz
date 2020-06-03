@@ -4,12 +4,14 @@ import Collaborate from "@carbon/icons-react/lib/collaborate/32";
 
 const About = () => {
   return (
-    <div className="bx--grid">
+    <div className="bx--grid bx--grid--condensed">
       <div className="bx--row">
-        <div className="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
-          <center>
-            <img src="/assets/about_header.svg" alt="About" width="75%" />
-          </center>
+        <div className="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4 bx--aspect-ratio bx--aspect-ratio--2x1">
+          <img
+            src="/assets/about_header.svg"
+            className="bx--aspect-ratio--object"
+            alt="About"
+          />
         </div>
         <div className="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
           <br />
