@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   XYPlot,
   HorizontalGridLines,
@@ -39,12 +39,28 @@ const buildData = (id, acceptanceRate) => {
 };
 
 const AcceptanceRate = (props) => {
+  const [width, setWidth] = useState(0);
+  const ref = useRef();
+
+  const updateWidth = () =>
+    setWidth(
+      ref && ref.current ? ref.current.getBoundingClientRect().width : 0
+    );
+
+  useEffect(() => {
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   const { conference } = props;
   const { id, acceptanceRate } = conference;
   const { accepted, total } = buildData(id, acceptanceRate);
+
   return (
-    <div>
+    <div style={{ width: "100%" }} ref={ref}>
       <h4>Acceptance Rate</h4>
+      <br />
       <DiscreteColorLegend
         orientation="horizontal"
         items={["Accepted", "Total"]}
@@ -52,9 +68,9 @@ const AcceptanceRate = (props) => {
       <XYPlot
         xType="ordinal"
         margin={{ left: 56 }}
-        width={420}
-        height={315}
-        animation={{ duration: 1000 }}
+        width={width}
+        height={(width * 1) / 2}
+        animation={{ duration: 500 }}
       >
         <VerticalGridLines />
         <HorizontalGridLines />

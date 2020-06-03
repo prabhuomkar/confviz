@@ -14,7 +14,7 @@ const Conference = () => {
       {conference ? (
         <div className="bx--grid">
           <div className="bx--row">
-            <div className="bx--col bx--col-lg-4 bx--col-md-6 bx--col-xlg-4 bx--col-sm-4">
+            <div className="bx--col bx--col-lg-4 bx--col-md-8 bx--col-xlg-4 bx--col-sm-4">
               <img src={conference.logo} alt={conference.id} width="50%" />
               <br />
               <br />
@@ -31,8 +31,10 @@ const Conference = () => {
                   {conference.website}
                 </a>
               </h5>
+              <br />
+              <br />
             </div>
-            <div className="bx--col bx--col-lg-4 bx--col-md-6 bx--col-xlg-4 bx--col-sm-4">
+            <div className="bx--col bx--col-lg-8 bx--col-md-8 bx--col-xlg-8 bx--col-sm-4">
               <AcceptanceRate conference={conference} />
               <WordCloud />
               <Keywords />
