@@ -1,14 +1,10 @@
-import data from "./data";
+import data from "./data/conferences";
 
-const getConference = (id) => data.CONFERENCES.filter((e) => e.id === id);
+const getConference = (id) => data.CONFERENCES.find((e) => e.id === id);
 
-const getPaperTableHeaders = () => [
-  { key: "title", header: "Title" },
-  { key: "authors", header: "Authors" },
-  { key: "arxiv", header: "arXiv" },
-];
+const withLongAndShortPapers = (id) => ["ACL", "EMNLP"].includes(id);
 
 export default {
   getConference,
-  getPaperTableHeaders,
+  withLongAndShortPapers,
 };
