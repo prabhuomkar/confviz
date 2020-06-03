@@ -15,7 +15,6 @@ const Conference = () => {
         <div className="bx--grid bx--grid--condensed">
           <div className="bx--row">
             <div className="bx--col bx--col-lg-4 bx--col-md-8 bx--col-xlg-4 bx--col-sm-4">
-              <img src={conference.logo} alt={conference.id} width="50%" />
               <br />
               <br />
               <h2>{conference.id}</h2>

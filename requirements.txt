@@ -1,6 +1,12 @@
 beautifulsoup4
+bs4
 gensim
+google
 jupyter
 matplotlib
 nltk
+notebook
 numpy
+requests
+tqdm
+urllib3
