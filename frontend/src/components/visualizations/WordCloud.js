@@ -1,16 +1,13 @@
 import React from "react";
 import ReactWordcloud from "react-wordcloud";
-import utils from "../../utils";
 
 const WordCloud = (props) => {
-  const { conference } = props;
-  const { id } = conference;
-  const words = utils.getKeywords(id);
+  const { keywords } = props;
   return (
     <div>
       <h4>WordCloud</h4>
       <ReactWordcloud
-        words={words}
+        words={keywords}
         options={{
           fontFamily: "Arial",
           fontWeight: "bold",

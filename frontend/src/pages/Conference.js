@@ -7,8 +7,10 @@ import WordCloud from "../components/visualizations/WordCloud";
 import Keywords from "../components/visualizations/Keywords";
 
 const Conference = () => {
-  let { conferenceID } = useParams();
-  let conference = utils.getConference(conferenceID);
+  const { conferenceID } = useParams();
+  const conference = utils.getConference(conferenceID);
+  const { id, website, name } = conference;
+  const keywords = utils.getKeywords(id);
   return (
     <>
       {conference ? (
@@ -17,17 +19,13 @@ const Conference = () => {
             <div className="bx--col bx--col-lg-4 bx--col-md-8 bx--col-xlg-4 bx--col-sm-4">
               <br />
               <br />
-              <h2>{conference.id}</h2>
-              <h4>{conference.name}</h4>
+              <h2>{id}</h2>
+              <h4>{name}</h4>
               <br />
               <h5>
                 Website:{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={conference.website}
-                >
-                  {conference.website}
+                <a target="_blank" rel="noopener noreferrer" href={website}>
+                  {website}
                 </a>
               </h5>
               <br />
@@ -35,8 +33,8 @@ const Conference = () => {
             </div>
             <div className="bx--col bx--col-lg-8 bx--col-md-8 bx--col-xlg-8 bx--col-sm-4">
               <AcceptanceRate conference={conference} />
-              <WordCloud conference={conference} />
-              <Keywords />
+              <WordCloud keywords={keywords} />
+              <Keywords keywords={keywords} />
             </div>
           </div>
         </div>
