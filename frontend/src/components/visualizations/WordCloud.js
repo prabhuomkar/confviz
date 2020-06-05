@@ -5,11 +5,12 @@ import utils from "../../utils";
 const WordCloud = (props) => {
   const { conference } = props;
   const { id } = conference;
+  const words = utils.getKeywords(id);
   return (
     <div>
       <h4>WordCloud</h4>
-      <ReactWordcloud 
-        words={utils.getKeywords(id)}
+      <ReactWordcloud
+        words={words}
         options={{
           fontFamily: "Arial",
           fontWeight: "bold",
