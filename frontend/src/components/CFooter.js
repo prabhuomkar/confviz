@@ -6,12 +6,7 @@ const CFooter = () => {
       <br />
       <br />
       <center>
-        <img
-          src="https://img.shields.io/github/stars/prabhuomkar/conference-viz?style=social"
-          style={{ verticalAlign: "middle" }}
-          alt="GitHub Stars"
-        />{" "}
-        ・ Developed by{" "}
+        Developed by{" "}
         <a
           href="https://github.com/prabhuomkar"
           target="_blank"

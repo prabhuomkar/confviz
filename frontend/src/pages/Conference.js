@@ -5,6 +5,7 @@ import Error from "./Error";
 import AcceptanceRate from "../components/visualizations/AcceptanceRate";
 import WordCloud from "../components/visualizations/WordCloud";
 import Keywords from "../components/visualizations/Keywords";
+import Papers from "../components/visualizations/Papers";
 
 const Conference = () => {
   const { conferenceID } = useParams();
@@ -37,6 +38,11 @@ const Conference = () => {
             <div className="bx--col bx--col-lg-6 bx--offset-lg-1 bx--col-md-8 bx--col-xlg-6 bx--offset-xlg-1 bx--col-sm-4">
               <WordCloud keywords={keywords} />
               <Keywords keywords={keywords} />
+            </div>
+          </div>
+          <div className="bx--row">
+            <div className="bx--col bx--col-lg-12 bx--col-md-8 bx--col-xlg-12 bx--col-sm-4">
+              <Papers conference={conference} />
             </div>
           </div>
         </div>
