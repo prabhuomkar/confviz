@@ -35,7 +35,7 @@ const Conference = () => {
             </div>
             <div className="bx--col bx--col-lg-8 bx--col-md-8 bx--col-xlg-8 bx--col-sm-4">
               <AcceptanceRate conference={conference} />
-              <WordCloud />
+              <WordCloud conference={conference} />
               <Keywords />
             </div>
           </div>
