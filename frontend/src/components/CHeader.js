@@ -20,7 +20,9 @@ import GitHubIcon from "@carbon/icons-react/lib/logo--github/20";
 const CHeader = () => {
   const history = useHistory();
   const [isSideNavExpanded, setSideNavExpanded] = useState(false);
+
   const updateIsSideNavExpanded = () => setSideNavExpanded(!isSideNavExpanded);
+
   return (
     <HeaderContainer
       render={() => (

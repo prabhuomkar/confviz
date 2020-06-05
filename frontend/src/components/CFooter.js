@@ -2,10 +2,42 @@ import React from "react";
 
 const CFooter = () => {
   return (
-    <div className="bx--offset-md-2 bx--col-md-4 bx--offset-sm-1 bx--col-sm-2 ">
+    <div className="bx--col-lg-12 bx--col-md-8 bx--col-sm-4 footer">
+      <br />
+      <br />
       <center>
-        Created by <a href="https://github.com/prabhuomkar">Omkar Prabhu</a>
+        <img
+          src="https://img.shields.io/github/stars/prabhuomkar/conference-viz?style=social"
+          style={{ verticalAlign: "middle" }}
+          alt="GitHub Stars"
+        />{" "}
+        ・ Developed by{" "}
+        <a
+          href="https://github.com/prabhuomkar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Omkar Prabhu
+        </a>{" "}
+        ・ Designed using{" "}
+        <a
+          href="http://carbondesignsystem.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          IBM's Carbon Design System
+        </a>{" "}
+        and{" "}
+        <a
+          href="http://uber.github.io/react-vis/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Uber's Visualizations
+        </a>
       </center>
+      <br />
+      <br />
     </div>
   );
 };

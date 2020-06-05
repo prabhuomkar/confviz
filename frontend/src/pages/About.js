@@ -11,6 +11,7 @@ const About = () => {
             src="/assets/about_header.svg"
             className="bx--aspect-ratio--object"
             alt="About"
+            style={{ padding: "32px" }}
           />
         </div>
         <div className="bx--col bx--col-lg-6 bx--col-md-4 bx--col-sm-4">
@@ -24,10 +25,16 @@ const About = () => {
           </h4>
           <br />
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            A website that gives you statistical information, arXiv paper links
+            and visualizations of Machine Learning conferences.
+            <br />
+            It is created and maintained by{" "}
+            <a href="https://github.com/prabhuomkar">Omkar Prabhu</a> and
+            inspired by{" "}
+            <a href="https://github.com/roomylee/ACL-2020-Papers">
+              Joohong Lee's work
+            </a>
+            .
           </p>
           <br />
           <br />
@@ -37,10 +44,19 @@ const About = () => {
           </h4>
           <br />
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Visit{" "}
+            <a href="https://github.com/prabhuomkar/conference-viz">GitHub </a>{" "}
+            for looking into source code and data.
+            <br />
+            If you want to contribute data and visualizations for more machine
+            learning conferences, feel free to look into the notebooks and raise
+            a Pull Request (PR) on GitHub.
+            <br />
+            If you found any issue in the visualizations, mark a{" "}
+            <a href="https://github.com/prabhuomkar/conference-viz/issues">
+              GitHub Issue
+            </a>{" "}
+            and I will follow up!
           </p>
           <br />
           <br />

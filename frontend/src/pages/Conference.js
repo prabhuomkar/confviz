@@ -30,9 +30,11 @@ const Conference = () => {
               </h5>
               <br />
               <br />
-            </div>
-            <div className="bx--col bx--col-lg-8 bx--col-md-8 bx--col-xlg-8 bx--col-sm-4">
               <AcceptanceRate conference={conference} />
+              <br />
+              <br />
+            </div>
+            <div className="bx--col bx--col-lg-6 bx--offset-lg-1 bx--col-md-8 bx--col-xlg-6 bx--offset-xlg-1 bx--col-sm-4">
               <WordCloud keywords={keywords} />
               <Keywords keywords={keywords} />
             </div>

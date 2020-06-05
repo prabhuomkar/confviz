@@ -33,7 +33,7 @@ const Keywords = (props) => {
 
   return (
     <div style={{ width: "100%" }} ref={ref}>
-      <h4>Keywords</h4>
+      <h4 className="text-underline">Keywords</h4>
       <XYPlot
         margin={{ left: 96 }}
         width={width}

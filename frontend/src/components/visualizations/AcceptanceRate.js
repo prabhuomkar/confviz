@@ -59,7 +59,7 @@ const AcceptanceRate = (props) => {
 
   return (
     <div style={{ width: "100%" }} ref={ref}>
-      <h4>Acceptance Rate</h4>
+      <h4 className="text-underline">Acceptance Rate</h4>
       <br />
       <DiscreteColorLegend
         orientation="horizontal"

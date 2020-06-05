@@ -5,7 +5,7 @@ const WordCloud = (props) => {
   const { keywords } = props;
   return (
     <div>
-      <h4>WordCloud</h4>
+      <h4 className="text-underline">WordCloud</h4>
       <ReactWordcloud
         words={keywords}
         options={{
@@ -15,8 +15,6 @@ const WordCloud = (props) => {
           rotationAngles: [0, 90],
         }}
       />
-      <br />
-      <br />
     </div>
   );
 };
