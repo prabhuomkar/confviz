@@ -1,3 +1,4 @@
+arxiv
 beautifulsoup4
 bs4
 gensim
