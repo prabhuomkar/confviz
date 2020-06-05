@@ -37,7 +37,7 @@ const Keywords = (props) => {
       <XYPlot
         margin={{ left: 96 }}
         width={width}
-        height={(width * 3) / 4}
+        height={(width * 4) / 3}
         yType="ordinal"
         animation={{ duration: 500 }}
       >
