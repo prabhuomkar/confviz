@@ -9,10 +9,19 @@ const Landing = () => {
           kind="info"
           subtitle={
             <span>
+              &nbsp;&nbsp;<a href="/CVPR">Visit Here</a>&nbsp;&nbsp;
+            </span>
+          }
+          title="CVPR 2020 is LIVE"
+        />
+        <InlineNotification
+          kind="info"
+          subtitle={
+            <span>
               &nbsp;&nbsp;<a href="/ICML">Visit Here</a>&nbsp;&nbsp;
             </span>
           }
-          title="ICML 2020 are LIVE"
+          title="ICML 2020 is LIVE"
         />
       </div>
     </div>

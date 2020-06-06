@@ -78,7 +78,7 @@ const CHeader = () => {
                   CVPR
                 </SideNavLink>
                 <SideNavLink
-                  renderIcon={EventScheduledIcon}
+                  renderIcon={EventDoneIcon}
                   onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/ACL"
@@ -86,7 +86,7 @@ const CHeader = () => {
                   ACL
                 </SideNavLink>
                 <SideNavLink
-                  renderIcon={EventScheduledIcon}
+                  renderIcon={EventDoneIcon}
                   onClick={updateIsSideNavExpanded}
                   element={Link}
                   to="/ICML"
