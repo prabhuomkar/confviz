@@ -34,7 +34,7 @@ Open [generate_links_and_stats.ipynb](generate_links_and_stats.ipynb) for doing 
 - [Uber React-Vis](https://uber.github.io/react-vis/)
 
 #### Running
-- Clong the repository and run the following to run UI:
+- Clone the repository and run the following to run UI:
 ```
 cd frontend
 npm install
