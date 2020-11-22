@@ -32,6 +32,10 @@ h5 {
   background-color: #212121;
 }
 
+.mdc-top-app-bar__row {
+  height: 56px !important;
+}
+
 .header-title {
   text-decoration: none;
   color: #ffffff;

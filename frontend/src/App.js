@@ -6,6 +6,7 @@ import SideNav from "./components/SideNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ICLR from "./pages/ICLR";
+import CVPR from "./pages/CVPR";
 import "./App.css";
 
 const App = () => {
@@ -18,7 +19,8 @@ const App = () => {
         <SideNav open={open} />
         <DrawerAppContent>
           <Route path="/" exact component={Home} />
-          <Route path="/iclr" exact component={ICLR} />
+          <Route path="/ICLR" exact component={ICLR} />
+          <Route path="/CVPR" exact component={CVPR} />
           <Route path="/about" exact component={About} />
         </DrawerAppContent>
       </div>

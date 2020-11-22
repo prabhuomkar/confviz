@@ -21,8 +21,8 @@ const Header = ({ toggleSideNav }) => {
               <NavLink className="header-title" exact to="/">
                 <img
                   src="/assets/logo.png"
-                  width="36px"
-                  height="36px"
+                  width="30px"
+                  height="30px"
                   style={{
                     float: "left",
                   }}

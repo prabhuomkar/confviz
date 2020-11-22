@@ -16,7 +16,7 @@ const sideNavItems = [
         name: "ICLR",
         image: null,
         icon: "event",
-        link: "/iclr",
+        link: "/ICLR",
         class: "conference-viz-icon",
       },
       {
@@ -24,7 +24,7 @@ const sideNavItems = [
         name: "CVPR",
         image: null,
         icon: "event",
-        link: "/cvpr",
+        link: "/CVPR",
         class: "conference-viz-icon",
       },
       {
@@ -32,7 +32,7 @@ const sideNavItems = [
         name: "ACL",
         image: null,
         icon: "event",
-        link: "/acl",
+        link: "/ACL",
         class: "conference-viz-icon",
       },
       {
@@ -40,7 +40,7 @@ const sideNavItems = [
         name: "ICML",
         image: null,
         icon: "event",
-        link: "/icml",
+        link: "/ICML",
         class: "conference-viz-icon",
       },
       {
@@ -48,7 +48,7 @@ const sideNavItems = [
         name: "EMNLP",
         image: null,
         icon: "event",
-        link: "/emnlp",
+        link: "/EMNLP",
         class: "conference-viz-icon",
       },
       {
@@ -56,7 +56,7 @@ const sideNavItems = [
         name: "NeurlIPS",
         image: null,
         icon: "event",
-        link: "/neurlips",
+        link: "/NEURLIPS",
         class: "conference-viz-icon",
       },
     ],

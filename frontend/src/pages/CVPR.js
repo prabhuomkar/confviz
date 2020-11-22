@@ -3,14 +3,17 @@ import { Grid, GridCell } from "@rmwc/grid";
 import "@rmwc/grid/styles";
 import AcceptanceRateGraph from "../components/graphs/AcceptanceRateGraph";
 
-const ICLR = () => {
+const CVPR = () => {
   const data = [
-    { year: "2017", accepted: 198, total: 507 },
-    { year: "2018", accepted: 314, total: 981 },
-    { year: "2019", accepted: 500, total: 1591 },
-    { year: "2020", accepted: 681, total: 2594 },
+    { year: "2014", accepted: 540, total: 1807 },
+    { year: "2015", accepted: 602, total: 2123 },
+    { year: "2016", accepted: 643, total: 2145 },
+    { year: "2017", accepted: 783, total: 2620 },
+    { year: "2018", accepted: 979, total: 3303 },
+    { year: "2019", accepted: 1294, total: 5160 },
+    { year: "2020", accepted: 1470, total: 6656 },
   ];
-  const title = "ICLR Acceptance Rate";
+  const title = "CVPR Acceptance Rate";
   return (
     <div>
       <Grid style={{ padding: "10px" }}>
@@ -58,4 +61,4 @@ const ICLR = () => {
   );
 };
 
-export default ICLR;
+export default CVPR;
