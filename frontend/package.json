@@ -1,32 +1,35 @@
 {
-  "name": "conference-viz",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@carbon/icons-react": "^10.3.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "carbon-components": "^10.12.0",
-    "carbon-components-react": "^7.12.0",
-    "carbon-icons": "^7.0.7",
-    "d3": "^5.16.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "@rmwc/button": "^6.1.4",
+    "@rmwc/drawer": "^6.1.4",
+    "@rmwc/grid": "^6.1.4",
+    "@rmwc/icon": "^6.1.4",
+    "@rmwc/list": "^6.1.4",
+    "@rmwc/top-app-bar": "^6.1.4",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/user-event": "^12.2.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "react-vis": "^1.11.7",
-    "react-wordcloud": "^1.2.3"
+    "react-scripts": "4.0.0",
+    "semiotic": "1.20.5",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.{js,md,scss}\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -39,9 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "node-sass": "^4.14.1",
-    "prettier": "^2.0.5"
   }
 }

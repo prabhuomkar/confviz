@@ -1,26 +1,29 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import CHeader from "./components/CHeader";
-import Landing from "./pages/Landing";
+import React, { useState } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { DrawerAppContent } from "@rmwc/drawer";
+import Header from "./components/Header";
+import SideNav from "./components/SideNav";
+import Home from "./pages/Home";
 import About from "./pages/About";
-import Conference from "./pages/Conference";
-import CFooter from "./components/CFooter";
-import { Content } from "carbon-components-react/lib/components/UIShell";
+import ICLR from "./pages/ICLR";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [open, setOpen] = useState(true);
+  const toggle = () => setOpen(!open);
   return (
-    <>
-      <CHeader />
-      <Content>
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/:conferenceID" component={Conference} />
-        </Switch>
-      </Content>
-      <CFooter />
-    </>
+    <BrowserRouter>
+      <div className="App">
+        <Header toggleSideNav={toggle} />
+        <SideNav open={open} />
+        <DrawerAppContent>
+          <Route path="/" exact component={Home} />
+          <Route path="/iclr" exact component={ICLR} />
+          <Route path="/about" exact component={About} />
+        </DrawerAppContent>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

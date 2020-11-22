@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif !important;
+}
+
+body,
+span {
+  font-family: "Inter", sans-serif !important;
+}
+
+strong,
+b {
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.top-app-bar {
+  background-color: #212121;
+}
+
+.header-title {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.conference-viz-icon {
+  color: #424242;
+}
+
+.typography {
+  font-size: 14px;
+}
+
+.icon {
+  position: relative;
+  font-size: 30px;
+  margin-right: 5px;
+  top: 6px;
+}

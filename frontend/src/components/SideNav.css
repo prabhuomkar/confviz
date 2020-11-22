@@ -1,0 +1,35 @@
+.drawer {
+  position: fixed;
+}
+
+.drawer-content {
+  padding: 0px 10px;
+}
+
+.drawer-subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px 0px 10px 0px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.nav-link:hover {
+  background: #eeeeee;
+  border-radius: 4px;
+}
+
+.nav-link:active {
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+
+.activated {
+  border-radius: 4px;
+  background: #e0e0e0;
+}
