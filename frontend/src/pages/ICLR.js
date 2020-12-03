@@ -1,7 +1,11 @@
 import React from "react";
-import { Grid, GridCell } from "@rmwc/grid";
+import { Grid, GridCell, GridRow } from "@rmwc/grid";
 import "@rmwc/grid/styles";
-import AcceptanceRateGraph from "../components/graphs/AcceptanceRateGraph";
+import ConfDetails from "../components/ConfDetails/ConfDetails";
+import AcceptanceRate from "../components/visualizations/AcceptanceRate";
+import Keywords from "../components/visualizations/Keywords";
+import WordCloud from "../components/visualizations/WordCloud";
+import Papers from "../components/visualizations/Papers";
 
 const ICLR = () => {
   const data = [
@@ -11,50 +15,30 @@ const ICLR = () => {
     { year: "2020", accepted: 681, total: 2594 },
   ];
   const title = "ICLR Acceptance Rate";
+
   return (
-    <div>
-      <Grid style={{ padding: "10px" }}>
-        <GridCell
-          desktop={6}
-          tablet={6}
-          phone={12}
-          style={{
-            border: "1px solid grey",
-            padding: "10px",
-            height: "450px",
-            width: "100%",
-          }}
-        >
-          <AcceptanceRateGraph title={title} data={data} />
+    <Grid>
+      <GridRow>
+        <GridCell desktop={3} tablet={12} phone={12}>
+          <ConfDetails />
         </GridCell>
-        <GridCell
-          desktop={6}
-          tablet={6}
-          phone={12}
-          style={{ border: "1px solid gray" }}
-        ></GridCell>
-      </Grid>
-      <Grid style={{ padding: "10px" }}>
-        <GridCell
-          desktop={6}
-          tablet={6}
-          phone={12}
-          style={{
-            border: "1px solid grey",
-            height: "450px",
-          }}
-        ></GridCell>
-        <GridCell
-          desktop={6}
-          tablet={6}
-          phone={12}
-          style={{
-            border: "1px solid grey",
-            height: "450px",
-          }}
-        ></GridCell>
-      </Grid>
-    </div>
+        <GridCell desktop={4} tablet={12} phone={12}>
+          <AcceptanceRate title={title} data={data} />
+        </GridCell>
+        <GridCell desktop={5} tablet={12} phone={12}>
+          <WordCloud />
+        </GridCell>
+      </GridRow>
+      <br />
+      <GridRow>
+        <GridCell desktop={4} tablet={12} phone={12}>
+          <Keywords />
+        </GridCell>
+        <GridCell desktop={8} tablet={12} phone={12}>
+          <Papers />
+        </GridCell>
+      </GridRow>
+    </Grid>
   );
 };
 

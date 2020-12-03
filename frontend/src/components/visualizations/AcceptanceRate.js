@@ -1,7 +1,7 @@
 import React from "react";
 import ResponsiveOrdinalFrame from "semiotic/lib/ResponsiveOrdinalFrame";
 
-const AcceptanceRateGraph = (props) => {
+const AcceptanceRate = (props) => {
   const { title, data } = props;
 
   const colorHash = {
@@ -14,7 +14,9 @@ const AcceptanceRateGraph = (props) => {
   const AcceptanceRateProps = {
     data: data,
     size: [280, 300],
-    type: "clusterbar",
+    responsiveWidth: true,
+    responsiveHeight: true,
+    type: "bar",
     oPadding: 5,
     oAccessor: "year",
     rAccessor: rAccessor,
@@ -29,13 +31,16 @@ const AcceptanceRateGraph = (props) => {
     ],
     oLabel: true,
   };
+
   return (
-    <ResponsiveOrdinalFrame
-      responsiveWidth={true}
-      responsiveHeight={true}
-      {...AcceptanceRateProps}
-    />
+    <div
+      style={{
+        height: "400px",
+      }}
+    >
+      <ResponsiveOrdinalFrame {...AcceptanceRateProps} />
+    </div>
   );
 };
 
-export default AcceptanceRateGraph;
+export default AcceptanceRate;
