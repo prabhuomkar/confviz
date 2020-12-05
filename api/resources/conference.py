@@ -1,16 +1,6 @@
 import json
 from flask_restful import Resource
-
-conferences = []
-
-with open('./data/ICLR/conference.json') as iclr, open('./data/CVPR/conference.json') as cvpr:
-  
-  iclr_conference = json.load(iclr)
-  cvpr_conference = json.load(cvpr)
-
-  conferences.append(iclr_conference)
-  conferences.append(cvpr_conference)
-
+from models.conferences import conferences
 
 class Conferences(Resource):
 	def get(self):
@@ -22,4 +12,6 @@ class Conference(Resource):
 			if conference["id"] == _id:
 				return conference
 		return {"error": "Invalid conference id"}, 404
+
+
 

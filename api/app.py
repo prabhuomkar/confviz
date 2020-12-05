@@ -1,3 +1,4 @@
+import json
 from flask import Flask
 from flask_restful import Api
 from resources.conference import Conference, Conferences

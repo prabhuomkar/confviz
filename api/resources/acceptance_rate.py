@@ -1,16 +1,6 @@
 import json
 from flask_restful import Resource
-
-acceptance_rates = []
-
-with open ('./data/ICLR/acceptance_rate.json') as iclr, open('./data/CVPR/acceptance_rate.json') as cvpr:
-	
-	iclr_acceptance_rate = json.load(iclr)
-	cvpr_acceptance_rate = json.load(cvpr)
-
-	acceptance_rates.append(iclr_acceptance_rate)
-	acceptance_rates.append(cvpr_acceptance_rate)
-
+from models.acceptance_rates import acceptance_rates
 
 class AcceptanceRates(Resource):
 	def get(self):
