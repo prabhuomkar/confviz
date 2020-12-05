@@ -1,0 +1,90 @@
+{
+	"id": "ACL",
+	"containsLongShort": true,
+	"acceptanceRate":[
+		{
+			"year": 2014,
+			"long": {
+				"accepted": 146,
+				"total": 527	
+			},
+			"short": {
+				"accepted": 139,
+				"total": 551	
+			}
+			
+		},
+		{
+			"year": 2015,
+			"long": {
+				"accepted": 173,
+				"total": 692	
+			},
+			"short": {
+				"accepted": 145,
+				"total": 648	
+			}
+			
+		},
+		{
+			"year": 2016,
+			"long": {
+				"accepted": 231,
+				"total": 825	
+			},
+			"short": {
+				"accepted": 97,
+				"total": 463	
+			}
+			
+		},
+		{
+			"year": 2017,
+			"long": {
+				"accepted": 195,
+				"total": 751	
+			},
+			"short": {
+				"accepted": 107,
+				"total": 567	
+			}
+			
+		},
+		{
+			"year": 2018,
+			"long": {
+				"accepted": 258,
+				"total": 1018	
+			},
+			"short": {
+				"accepted": 126,
+				"total": 526	
+			}
+			
+		},
+		{
+			"year": 2019,
+			"long": {
+				"accepted": 447,
+				"total": 1737	
+			},
+			"short": {
+				"accepted": 213,
+				"total": 1168	
+			}
+			
+		},
+		{
+			"year": 2020,
+			"long": {
+				"accepted": 571,
+				"total": 2244	
+			},
+			"short": {
+				"accepted": 208,
+				"total": 1185	
+			}
+			
+		}
+	]
+}

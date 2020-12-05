@@ -1,0 +1,13 @@
+{
+	"id": "CVPR",
+	"keywords":[
+		{
+			"image": 222,
+			"capusle_networks": 11
+		},
+		{
+			"image": 333,
+			"capusle_networks": 15
+		}
+	]
+}
