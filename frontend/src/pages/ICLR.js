@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, GridCell, GridRow } from "@rmwc/grid";
 import "@rmwc/grid/styles";
-import ConfDetails from "../components/ConfDetails/ConfDetails";
+import Conference from "../components/Conference/Conference";
 import AcceptanceRate from "../components/visualizations/AcceptanceRate";
 import Keywords from "../components/visualizations/Keywords";
 import WordCloud from "../components/visualizations/WordCloud";
@@ -20,7 +20,7 @@ const ICLR = () => {
     <Grid>
       <GridRow>
         <GridCell desktop={3} tablet={12} phone={12}>
-          <ConfDetails />
+          <Conference id="ICLR" />
         </GridCell>
         <GridCell desktop={4} tablet={12} phone={12}>
           <AcceptanceRate title={title} data={data} />

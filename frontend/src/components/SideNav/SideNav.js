@@ -53,10 +53,10 @@ const sideNavItems = [
       },
       {
         id: 6,
-        name: "NeurlIPS",
+        name: "NeurIPS",
         image: null,
         icon: "event",
-        link: "/NEURLIPS",
+        link: "/NIPS",
         class: "conference-viz-icon",
       },
     ],
@@ -77,8 +77,9 @@ const sideNavItems = [
 ];
 
 const SideNav = (props) => {
+  const { hide, open } = props;
   return (
-    <Drawer dismissible open={props.open} className="drawer">
+    <Drawer dismissible open={open} className="drawer">
       <DrawerContent className="drawer-content">
         <List>
           {sideNavItems.map((section) => (
@@ -93,7 +94,7 @@ const SideNav = (props) => {
                   activeClassName="activated"
                   exact
                   to={item.link}
-                  onClick={props.click}
+                  onClick={hide}
                 >
                   <ListItem disabled>
                     <Icon className={item.class} icon={item.icon} />

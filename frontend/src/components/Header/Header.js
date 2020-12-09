@@ -10,7 +10,8 @@ import {
 import { NavLink } from "react-router-dom";
 import "@rmwc/top-app-bar/styles";
 
-const Header = ({ toggleSideNav }) => {
+const Header = (props) => {
+  const { toggleSideNav } = props;
   return (
     <div>
       <TopAppBar className="top-app-bar" fixed>

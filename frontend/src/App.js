@@ -6,6 +6,7 @@ import SideNav from "./components/SideNav/SideNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ICLR from "./pages/ICLR";
+import CVPR from "./pages/CVPR";
 import "./App.css";
 
 const App = () => {
@@ -15,10 +16,11 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <Header toggleSideNav={toggle} />
-        <SideNav open={open} />
+        <SideNav hide={toggle} open={open} />
         <DrawerAppContent>
           <Route path="/" exact component={Home} />
           <Route path="/ICLR" exact component={ICLR} />
+          <Route path="/CVPR" exact component={CVPR} />
           <Route path="/about" exact component={About} />
         </DrawerAppContent>
       </div>
