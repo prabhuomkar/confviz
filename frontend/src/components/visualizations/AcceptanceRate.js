@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "@rmwc/card";
 import ResponsiveOrdinalFrame from "semiotic/lib/ResponsiveOrdinalFrame";
 
 const AcceptanceRate = (props) => {
@@ -35,7 +36,8 @@ const AcceptanceRate = (props) => {
   return (
     <div
       style={{
-        height: "400px",
+        height: "360px",
+        padding: "1rem",
       }}
     >
       <ResponsiveOrdinalFrame {...AcceptanceRateProps} />

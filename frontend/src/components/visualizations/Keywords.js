@@ -25,8 +25,8 @@ const Keywords = () => {
     axes: false,
   };
   return (
-    <div style={{ height: "350px" }}>
-      <ResponsiveOrdinalFrame projection={"horizontal"} {...KeywordsProps} />
+    <div style={{ height: "360px", padding: "1rem" }} className="card-cell">
+      <ResponsiveOrdinalFrame {...KeywordsProps} />
     </div>
   );
 };

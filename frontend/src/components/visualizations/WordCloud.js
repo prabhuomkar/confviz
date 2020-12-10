@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "@rmwc/card";
 import ReactWordcloud from "react-wordcloud";
 
 const options = {
@@ -37,10 +38,12 @@ const words = [
 
 const WordCloud = () => {
   return (
-    <div>
-      <center style={{ padding: "10px" }}>WordCloud</center>
-      <ReactWordcloud options={options} size={size} words={words} />
-    </div>
+    <Card>
+      <div style={{ padding: "1rem" }}>
+        <center style={{ padding: "10px" }}>WordCloud</center>
+        <ReactWordcloud options={options} size={size} words={words} />
+      </div>
+    </Card>
   );
 };
 export default WordCloud;

@@ -53,7 +53,7 @@ const sideNavItems = [
       },
       {
         id: 6,
-        name: "NeurIPS",
+        name: "NIPS",
         image: null,
         icon: "event",
         link: "/NIPS",
