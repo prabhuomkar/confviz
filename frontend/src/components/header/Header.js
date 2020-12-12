@@ -19,16 +19,8 @@ const Header = (props) => {
           <TopAppBarSection>
             <TopAppBarNavigationIcon icon="menu" onClick={toggleSideNav} />
             <TopAppBarTitle>
-              <NavLink className="header-title" exact to="/">
-                <img
-                  src="/assets/logo.png"
-                  width="30px"
-                  height="30px"
-                  style={{
-                    float: "left",
-                  }}
-                />
-                &nbsp;&nbsp;&nbsp;
+              <NavLink exact to="/" className="header-title">
+                <img src="/assets/logo.png" className="logo" />
                 <span>conference-viz</span>
               </NavLink>
             </TopAppBarTitle>

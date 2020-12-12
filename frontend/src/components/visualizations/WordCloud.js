@@ -6,8 +6,8 @@ const options = {
   rotationAngles: [-90, 0],
   fontFamily: "Inter, sans-serif",
 };
-const size = [280, 300];
-/*
+const size = [300, 300];
+
 const words = [
   {
     text: "reinforcement",
@@ -34,18 +34,17 @@ const words = [
     value: 23,
   },
 ];
-*/
-const words = [
-  { image: 222, capusle_networks: 11 },
-  { image: 333, capusle_networks: 15 },
-  { image: 111, capusle_networks: 6 },
-];
 
 const WordCloud = () => {
   return (
     <div style={{ padding: "1rem" }}>
       <center style={{ padding: "10px" }}>WordCloud</center>
-      <ReactWordcloud options={options} size={size} words={words} />
+      <ReactWordcloud
+        options={options}
+        size={size}
+        words={words}
+        style={{ border: "1px solid black" }}
+      />
     </div>
   );
 };

@@ -14,50 +14,44 @@ const sideNavItems = [
       {
         id: 1,
         name: "ICLR",
-        image: null,
         icon: "event",
         link: "/ICLR",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
       },
       {
         id: 2,
         name: "CVPR",
-        image: null,
         icon: "event",
         link: "/CVPR",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
       },
       {
         id: 3,
         name: "ACL",
-        image: null,
         icon: "event",
         link: "/ACL",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
       },
       {
         id: 4,
         name: "ICML",
-        image: null,
         icon: "event",
         link: "/ICML",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
       },
       {
         id: 5,
         name: "EMNLP",
-        image: null,
         icon: "event",
         link: "/EMNLP",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
       },
       {
         id: 6,
         name: "NIPS",
-        image: null,
         icon: "event",
         link: "/NIPS",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
       },
     ],
   },
@@ -67,10 +61,16 @@ const sideNavItems = [
       {
         id: 7,
         name: "About Us",
-        image: null,
         icon: "info",
         link: "/about",
-        class: "conference-viz-icon",
+        class: "side-nav-icon",
+      },
+      {
+        id: 8,
+        name: "Contribute",
+        icon: "connect_without_contact",
+        link: "/contribute",
+        class: "side-nav-icon",
       },
     ],
   },
@@ -98,7 +98,6 @@ const SideNav = (props) => {
                 >
                   <ListItem disabled>
                     <Icon className={item.class} icon={item.icon} />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span>{item.name}</span>
                   </ListItem>
                 </NavLink>

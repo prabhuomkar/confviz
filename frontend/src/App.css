@@ -24,28 +24,30 @@ h5 {
   font-weight: 500;
 }
 
+p {
+  line-height: 24px;
+}
+
 .link {
   text-decoration: none;
-  color: black;
+  color: #4c959a;
 }
 
 .top-app-bar {
   background-color: #212121;
 }
 
-/*
-.mdc-top-app-bar__row {
-  height: 56px !important;
-}
-*/
-
 .header-title {
+  display: flex;
   text-decoration: none;
   color: #ffffff;
+  align-content: space-between;
 }
 
-.conference-viz-icon {
-  color: #424242;
+.logo {
+  width: 34px;
+  height: 34px;
+  margin: 2px 12px 0px 0px;
 }
 
 .typography {
@@ -59,9 +61,39 @@ h5 {
   top: 6px;
 }
 
-.card-cell {
+.card {
   border-radius: 6px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background: #ffffff;
+  padding: 12px 20px;
+}
+
+.cell-card {
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  padding: 12px 20px;
+}
+
+.papers-card {
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+}
+
+.description,
+.authors {
+  color: rgba(0, 0, 0, 0.66);
+}
+
+@media only screen and (max-width: 600px) {
+  .recharts-responsive {
+    width: 100%;
+    height: "340px";
+  }
 }

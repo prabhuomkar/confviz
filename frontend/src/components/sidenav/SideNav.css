@@ -13,6 +13,11 @@
   text-transform: uppercase;
 }
 
+.side-nav-icon {
+  color: #424242;
+  margin-right: 16px;
+}
+
 .nav-link {
   text-decoration: none;
   display: block;
