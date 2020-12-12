@@ -9,7 +9,7 @@ const ConferenceDetails = (props) => {
       <p style={{ color: "rgba(0,0,0,.66)" }}>{conf.description}</p>
       <p>
         Website :{" "}
-        <a href={conf.website} target="_blank">
+        <a href={conf.website} target="_blank" rel="noreferrer">
           {conf.website}
         </a>
       </p>

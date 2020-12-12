@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "@rmwc/card";
 import ResponsiveOrdinalFrame from "semiotic/lib/ResponsiveOrdinalFrame";
 
 const AcceptanceRate = (props) => {
@@ -18,11 +17,14 @@ const AcceptanceRate = (props) => {
     responsiveWidth: true,
     responsiveHeight: true,
     type: "bar",
-    oPadding: 5,
+    oPadding: 6,
     oAccessor: "year",
     rAccessor: rAccessor,
     style: (d) => {
-      return { fill: colorHash[rAccessor[d.rIndex]], stroke: "white" };
+      return {
+        fill: colorHash[rAccessor[d.rIndex]],
+        stroke: "white",
+      };
     },
     title: { title },
     axes: [

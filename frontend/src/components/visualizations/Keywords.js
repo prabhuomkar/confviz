@@ -21,6 +21,7 @@ const Keywords = () => {
     },
     style: { fill: "#4C959A", stroke: "white" },
     title: "Keywords",
+    //oSort: {(e.tweets, e.retweets) => e.tweets < e.retweets},
     oLabel: true,
     axes: false,
   };
