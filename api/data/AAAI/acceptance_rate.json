@@ -1,0 +1,46 @@
+{
+	"id": "AAAI",
+	"containsLongShort": false,
+	"acceptanceRate":[
+		{
+			"year": 2014,
+			"accepted": 398,
+			"total": 1406
+		},
+		{
+			"year": 2015,
+			"accepted": 531,
+			"total": 1991
+		},
+		{
+			"year": 2016,
+			"accepted": 549,
+			"total": 2132
+		},
+		{
+			"year": 2017,
+			"accepted": 638,
+			"total": 2590
+		},
+		{
+			"year": 2018,
+			"accepted": 933,
+			"total": 3800
+		},
+		{
+			"year": 2019,
+			"accepted": 1150,
+			"total": 7095
+		},
+		{
+			"year": 2020,
+			"accepted": 1591,
+			"total": 7737
+		},
+		{
+			"year": 2021,
+			"accepted": 1692,
+			"total": 7911
+		}		  
+	]
+}

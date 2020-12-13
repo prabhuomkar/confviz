@@ -1,2 +1,4 @@
-flask
-flask_restful
+Flask
+Flask_RESTful
+flask_cors
+uwsgi

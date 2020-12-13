@@ -1,0 +1,81 @@
+{
+	"id": "AAAI",
+	"keywords": [
+		{
+			"keyword": "generation",
+			"count": 79
+		}, 
+		{
+			"keyword": "translation",
+			"count": 75
+		}, 
+		{
+			"keyword": "machine",
+			"count": 69
+		}, 
+		{
+			"keyword": "dialogue",
+			"count": 39
+		}, 
+		{
+			"keyword": "knowledge",
+			"count": 38
+		}, 
+		{
+			"keyword": "word",
+			"count": 37
+		}, 
+		{
+			"keyword": "graph",
+			"count": 36
+		}, 
+		{
+			"keyword": "extraction",
+			"count": 35
+		}, 
+		{
+			"keyword": "unsupervised",
+			"count": 34
+		}, 
+		{
+			"keyword": "question",
+			"count": 32
+		}, 
+		{
+			"keyword": "classification",
+			"count": 29
+		}, 
+		{
+			"keyword": "answering",
+			"count": 27
+		}, 
+		{
+			"keyword": "evaluation",
+			"count": 27
+		}, 
+		{
+			"keyword": "summarization",
+			"count": 27
+		}, 
+		{
+			"keyword": "semantic",
+			"count": 26
+		}, 
+		{
+			"keyword": "information",
+			"count": 26
+		}, 
+		{
+			"keyword": "parsing",
+			"count": 26
+		}, 
+		{
+			"keyword": "entity",
+			"count": 25
+		}, 
+		{
+			"keyword": "embeddings",
+			"count": 24
+		}
+	]
+}
