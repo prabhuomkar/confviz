@@ -9,7 +9,7 @@ import About from "./pages/About";
 import "./App.css";
 
 const App = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
   return (
     <BrowserRouter>

@@ -13,12 +13,11 @@ const Loading = () => {
             <img
               src="/assets/loading.svg"
               alt="loading"
-              width="335px"
-              height="335px"
+              width="320px"
+              height="320px"
               align="center"
             />
             <LinearProgress className="loading" />
-            <h3>Loading...</h3>
           </center>
         </GridCell>
       </GridRow>

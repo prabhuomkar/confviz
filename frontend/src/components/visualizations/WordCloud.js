@@ -2,11 +2,12 @@ import React from "react";
 import ReactWordcloud from "react-wordcloud";
 
 const options = {
-  rotations: 2,
-  rotationAngles: [-90, 0],
+  //rotations: 0,
+  //rotationAngles: [0, 90],
   fontFamily: "Inter, sans-serif",
 };
-const size = [300, 300];
+
+const size = [0, 240];
 
 const words = [
   {
@@ -37,15 +38,12 @@ const words = [
 
 const WordCloud = () => {
   return (
-    <div style={{ padding: "1rem" }}>
-      <center style={{ padding: "10px" }}>WordCloud</center>
-      <ReactWordcloud
-        options={options}
-        size={size}
-        words={words}
-        style={{ border: "1px solid black" }}
-      />
-    </div>
+    <ReactWordcloud
+      options={options}
+      size={size}
+      words={words}
+      style={{ borderBottom: "1px solid #e0e0e0" }}
+    />
   );
 };
 export default WordCloud;

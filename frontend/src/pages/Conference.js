@@ -58,10 +58,20 @@ const Conference = ({ id }) => {
       {loading ? (
         <Grid>
           <GridRow>
-            <GridCell desktop={3} tablet={12} phone={12} className="cell-card">
+            <GridCell
+              desktop={3}
+              tablet={12}
+              phone={12}
+              className="details-card"
+            >
               <Details conf={conference} />
             </GridCell>
-            <GridCell desktop={4} tablet={12} phone={12} className="cell-card">
+            <GridCell
+              desktop={4}
+              tablet={12}
+              phone={12}
+              className="acceptance-rate-card"
+            >
               <AcceptanceRate
                 title={title}
                 data={acceptanceRate.acceptanceRate}

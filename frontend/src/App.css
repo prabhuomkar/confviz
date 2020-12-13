@@ -74,7 +74,23 @@ p {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background: #ffffff;
-  padding: 12px 20px;
+  padding: 20px 20px;
+}
+
+.details-card {
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  padding: 0px 20px;
+}
+
+.acceptance-rate-card {
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  padding: 20px 16px 20px 0px;
 }
 
 .papers-card {
