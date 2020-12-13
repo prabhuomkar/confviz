@@ -3,5 +3,6 @@
 	"name": "Conference on Computer Vision and Pattern Recognition",
 	"description": "The Conference on Computer Vision and Pattern Recognition is an annual conference on computer vision and pattern recognition, which is regarded as one of the most important conferences in its field.",
 	"website": "http://cvpr2021.thecvf.com/",
-	"image": "https://pbs.twimg.com/profile_images/1269008162763530240/gWq4JZcA_400x400.jpg"
+	"image": "https://pbs.twimg.com/profile_images/1269008162763530240/gWq4JZcA_400x400.jpg",
+	"wordcloud_image": "http://www.wilsonmongwe.co.za/analyzing-a-south-african-twitter-financial-news-corpus-using-topic-models/machine-learning-tag-cloud/"
 }

@@ -1,0 +1,35 @@
+{
+	"id": "CVPR",
+	"papers":[
+		{
+			"title": "RTFM: Generalising to New Environment Dynamics via Reading",
+			"authors": "Victor Zhong, Tim Rocktäschel, Edward Grefenstette",
+			"link": "",
+			"summary": ""
+		},
+		{
+			"title": "LEARNING EXECUTION THROUGH NEURAL CODE FUSION",
+			"authors": "Zhan Shi, Kevin Swersky, Daniel Tarlow, Parthasarathy Ranganathan, Milad Hashemi",
+			"link": "",
+			"summary": ""
+		},
+		{
+			"title": "Neural Text Generation With Unlikelihood Training",
+			"authors": "Sean Welleck, Ilia Kulikov, Stephen Roller, Emily Dinan, Kyunghyun Cho, Jason Weston",
+			"link": "https://arxiv.org/abs/1908.04319",
+			"summary": ""
+		},
+		{
+			"title": "SNOW: Subscribing to Knowledge via Channel Pooling for Transfer & Lifelong Learning of Convolutional Neural Networks -",
+			"authors": "Chungkuk Yoo, Bumsoo Kang, Minsik Cho",
+			"link": "",
+			"summary": ""
+		},
+		{
+			"title": "Spike-based causal inference for weight alignment -",
+			"authors": "Jordan Guerguiev, Konrad Kording, Blake Richards",
+			"link": " https://arxiv.org/abs/1910.01689",
+			"summary": ""
+		}
+	]
+}
