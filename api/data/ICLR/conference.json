@@ -4,5 +4,6 @@
 	"description": "The International Conference on Learning Representations is a machine learning conference held every spring. ",
 	"website": "https://iclr.cc/",
 	"image": "https://pbs.twimg.com/profile_images/1242741510929612801/Mt1ozX07_400x400.jpg",
-	"wordcloud_image": "http://www.wilsonmongwe.co.za/analyzing-a-south-african-twitter-financial-news-corpus-using-topic-models/machine-learning-tag-cloud/"
+	"wordcloud_image": "http://www.wilsonmongwe.co.za/analyzing-a-south-african-twitter-financial-news-corpus-using-topic-models/machine-learning-tag-cloud/",
+  "event_date": "May 4, 2021"
 }
