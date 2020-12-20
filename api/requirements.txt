@@ -1,4 +1,0 @@
-Flask
-Flask_RESTful
-flask_cors
-uwsgi
