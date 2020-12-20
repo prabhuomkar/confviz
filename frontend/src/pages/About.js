@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <Grid>
-        <GridRow className="card">
+        <GridRow className="card-cell">
           <GridCell desktop={8} phone={7} tablet={8} align="middle">
             <h1>About</h1>
             <h2>

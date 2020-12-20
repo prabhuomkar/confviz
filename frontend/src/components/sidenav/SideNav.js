@@ -13,67 +13,53 @@ const sideNavItems = [
     items: [
       {
         id: 1,
-        name: "ICLR",
+        name: "AAAI",
         icon: "event",
-        link: "/ICLR",
-        class: "side-nav-icon",
+        link: "/AAAI",
+        class: "side-nav-icon"
       },
       {
         id: 2,
-        name: "CVPR",
-        icon: "event",
-        link: "/CVPR",
-        class: "side-nav-icon",
-      },
-      {
-        id: 3,
         name: "ACL",
         icon: "event",
         link: "/ACL",
-        class: "side-nav-icon",
+        class: "side-nav-icon"
+      },
+      {
+        id: 3,
+        name: "CVPR",
+        icon: "event",
+        link: "/CVPR",
+        class: "side-nav-icon"
       },
       {
         id: 4,
-        name: "ICML",
+        name: "ICLR",
         icon: "event",
-        link: "/ICML",
-        class: "side-nav-icon",
-      },
-      {
-        id: 5,
-        name: "EMNLP",
-        icon: "event",
-        link: "/EMNLP",
-        class: "side-nav-icon",
-      },
-      {
-        id: 6,
-        name: "NIPS",
-        icon: "event",
-        link: "/NIPS",
-        class: "side-nav-icon",
-      },
-    ],
+        link: "/ICLR",
+        class: "side-nav-icon"
+      }
+    ]
   },
   {
     subtitle: "support",
     items: [
       {
-        id: 7,
+        id: 5,
         name: "About Us",
         icon: "info",
         link: "/about",
-        class: "side-nav-icon",
+        class: "side-nav-icon"
       },
       {
-        id: 8,
+        id: 6,
         name: "Contribute",
         icon: "connect_without_contact",
         link: "/contribute",
-        class: "side-nav-icon",
-      },
-    ],
-  },
+        class: "side-nav-icon"
+      }
+    ]
+  }
 ];
 
 const SideNav = (props) => {

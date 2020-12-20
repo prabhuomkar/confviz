@@ -8,14 +8,13 @@ const Loading = () => {
   return (
     <Grid>
       <GridRow>
-        <GridCell desktop={12} phone={12} tablet={12} align="center">
+        <GridCell span={12}>
           <center>
             <img
               src="/assets/loading.svg"
               alt="loading"
               width="320px"
               height="320px"
-              align="center"
             />
             <LinearProgress className="loading" />
           </center>

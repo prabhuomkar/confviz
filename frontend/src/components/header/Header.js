@@ -5,7 +5,7 @@ import {
   TopAppBarSection,
   TopAppBarTitle,
   TopAppBarFixedAdjust,
-  TopAppBarNavigationIcon,
+  TopAppBarNavigationIcon
 } from "@rmwc/top-app-bar";
 import { NavLink } from "react-router-dom";
 import "@rmwc/top-app-bar/styles";
@@ -20,8 +20,8 @@ const Header = (props) => {
             <TopAppBarNavigationIcon icon="menu" onClick={toggleSideNav} />
             <TopAppBarTitle>
               <NavLink exact to="/" className="header-title">
-                <img src="/assets/logo.png" className="logo" />
-                <span>conference-viz</span>
+                <img src="/assets/logo.png" className="logo" alt="logo" />
+                <span>confviz</span>
               </NavLink>
             </TopAppBarTitle>
           </TopAppBarSection>

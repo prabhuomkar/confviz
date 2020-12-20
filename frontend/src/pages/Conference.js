@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Grid, GridCell, GridRow } from "@rmwc/grid";
 import Details from "../components/details/Details";
-import AcceptanceRate from "../components/visualizations/AcceptanceRate";
+import AcceptanceRateLSF from "../components/visualizations/acceptance-rate/AcceptanceRateLSF";
+import AcceptanceRateLST from "../components/visualizations/acceptance-rate/AcceptanceRateLST";
 import Keywords from "../components/visualizations/Keywords";
-// import WordCloud from "../components/visualizations/WordCloud";
 import Papers from "../components/papers/Papers";
 import Loading from "../components/loading/Loading";
 import axios from "axios";
@@ -11,23 +11,24 @@ import axios from "axios";
 const Conference = ({ id }) => {
   const [conference, setConference] = useState({});
   const [acceptanceRate, setAcceptanceRate] = useState({});
-  const [keywords, setKeywords] = useState({});
+  const [keywords, setKeywords] = useState([]);
   const [papers, setPapers] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const title = `${id} Acceptance Rate`;
-
-  const fetchData = async (conference_id) => {
+  const fetchData = async (conf_id) => {
     try {
-      const conferenceUrl = `https://conference-viz-api.herokuapp.com/conference/${conference_id}`;
-      const acceptanceRateUrl = `https://conference-viz-api.herokuapp.com/conference/${conference_id}/acceptance-rate`;
-      const keywordsUrl = `https://conference-viz-api.herokuapp.com/conference/${conference_id}/keywords`;
-      const papersUrl = `https://conference-viz-api.herokuapp.com/conference/${conference_id}/papers`;
-
-      const getConference = await axios.get(conferenceUrl);
-      const getAcceptanceRate = await axios.get(acceptanceRateUrl);
-      const getKeywords = await axios.get(keywordsUrl);
-      const getPapers = await axios.get(papersUrl);
+      const getConference = await axios.get(
+        `https://conference-viz-api.herokuapp.com/conference/${conf_id}`
+      );
+      const getAcceptanceRate = await axios.get(
+        `https://conference-viz-api.herokuapp.com/conference/${conf_id}/acceptance-rate`
+      );
+      const getKeywords = await axios.get(
+        `https://conference-viz-api.herokuapp.com/conference/${conf_id}/keywords`
+      );
+      const getPapers = await axios.get(
+        `https://conference-viz-api.herokuapp.com/conference/${conf_id}/papers`
+      );
 
       axios
         .all([getConference, getAcceptanceRate, getKeywords, getPapers])
@@ -72,18 +73,22 @@ const Conference = ({ id }) => {
               phone={12}
               className="acceptance-rate-card"
             >
-              <AcceptanceRate
-                title={title}
-                data={acceptanceRate.acceptanceRate}
-              />
+              {acceptanceRate.containsLongShort ? (
+                <AcceptanceRateLST data={acceptanceRate.acceptanceRate} />
+              ) : (
+                <AcceptanceRateLSF data={acceptanceRate.acceptanceRate} />
+              )}
             </GridCell>
-            <GridCell desktop={5} tablet={12} phone={12} className="cell-card">
-              {/* <WordCloud /> */}
-            </GridCell>
+            <GridCell
+              desktop={5}
+              tablet={12}
+              phone={12}
+              className="card-cell"
+            ></GridCell>
           </GridRow>
           <br />
           <GridRow>
-            <GridCell desktop={5} tablet={12} phone={12} className="cell-card">
+            <GridCell desktop={5} tablet={12} phone={12} className="card-cell">
               <Keywords data={keywords} />
             </GridCell>
             <GridCell desktop={7} tablet={12} phone={12}>

@@ -6,7 +6,7 @@ import SideNav from "./components/sidenav/SideNav";
 import Home from "./pages/Home";
 import Conference from "./pages/Conference";
 import About from "./pages/About";
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -18,13 +18,18 @@ const App = () => {
         <SideNav hide={toggle} open={open} />
         <DrawerAppContent>
           <Route path="/" exact component={Home} />
-          <Route path="/ICLR" exact render={() => <Conference id="ICLR" />} />
-          <Route path="/CVPR" exact render={() => <Conference id="CVPR" />} />
+          <Route path="/AAAI" exact render={() => <Conference id="AAAI" />} />
           <Route path="/ACL" exact render={() => <Conference id="ACL" />} />
-          <Route path="/ICML" exact render={() => <Conference id="ICML" />} />
-          <Route path="/EMNLP" exact render={() => <Conference id="EMNLP" />} />
-          <Route path="/NIPS" exact render={() => <Conference id="NIPS" />} />
+          <Route path="/CVPR" exact render={() => <Conference id="CVPR" />} />
+          <Route path="/ICLR" exact render={() => <Conference id="ICLR" />} />
           <Route path="/about" exact component={About} />
+          <Route
+            path="/contribute"
+            component={() => {
+              window.location.href =
+                "https://github.com/prabhuomkar/conference-viz";
+            }}
+          />
         </DrawerAppContent>
       </div>
     </BrowserRouter>

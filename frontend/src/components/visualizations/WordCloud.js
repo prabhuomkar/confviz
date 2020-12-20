@@ -1,49 +1,29 @@
 import React from "react";
-import ReactWordcloud from "react-wordcloud";
+import { GridRow, GridCell } from "@rmwc/grid";
+import "@rmwc/card/styles";
+import { Link } from "react-router-dom";
 
-const options = {
-  //rotations: 0,
-  //rotationAngles: [0, 90],
-  fontFamily: "Inter, sans-serif",
-};
-
-const size = [0, 240];
-
-const words = [
-  {
-    text: "reinforcement",
-    value: 44,
-  },
-  {
-    text: "adversarial",
-    value: 43,
-  },
-  {
-    text: "graph",
-    value: 40,
-  },
-  {
-    text: "training",
-    value: 38,
-  },
-  {
-    text: "generalization",
-    value: 24,
-  },
-  {
-    text: "generative",
-    value: 23,
-  },
-];
-
-const WordCloud = () => {
+const WordCloud = ({ data }) => {
   return (
-    <ReactWordcloud
-      options={options}
-      size={size}
-      words={words}
-      style={{ borderBottom: "1px solid #e0e0e0" }}
-    />
+    <GridRow>
+      {data.map((conference) => {
+        return (
+          <GridCell
+            desktop={4}
+            tablet={4}
+            phone={12}
+            className="card-cell"
+            key={conference.id}
+          >
+            <Link to={conference.id} style={{ textDecoration: "none" }}>
+              <img src="/assets/word_cloud.jpg" alt="word_cloud" width="100%" />
+              <p className="link">{conference.name}</p>
+              <p className="description">{conference.description}</p>
+            </Link>
+          </GridCell>
+        );
+      })}
+    </GridRow>
   );
 };
 export default WordCloud;

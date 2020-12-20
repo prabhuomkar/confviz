@@ -1,42 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, GridRow, GridCell } from "@rmwc/grid";
-import { List, ListDivider } from "@rmwc/list";
 import WordCloud from "../components/visualizations/WordCloud";
-import "@rmwc/card/styles";
+import Loading from "../components/loading/Loading";
+import Error from "../components/error/Error";
+import axios from "axios";
+import useAxios from "axios-hooks";
 import "@rmwc/grid/styles";
 
 const Home = () => {
+  /*
+  const getData = async () => {
+    try {
+      const conferences = await axios.get(
+        "https://conference-viz-api.herokuapp.com/conferences"
+      );
+      console.log(conferences.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+  */
+  const [{ data, loading, error }] = useAxios(
+    "https://conference-viz-api.herokuapp.com/conferences"
+  );
+
+  if (loading) return <Loading />;
+  if (error) return <Error />;
+
   return (
-    <div>
-      <Grid>
-        <GridRow>
-          <GridCell desktop={8} phone={6} tablet={7} align="middle">
-            <h1>conference-viz</h1>
-            <p>
-              Statistics, Paper Links and Visualizations of Machine Learning
-              Conferences
-            </p>
-          </GridCell>
-        </GridRow>
-        <GridRow>
-          <GridCell desktop={4} phone={12} tablet={12} className="card">
-            <img src="/assets/word_cloud.jpg" alt="word_cloud" width="100%" />
-            <p>WordCloud Title</p>
-            <p className="description">WordCloud description</p>
-          </GridCell>
-          <GridCell desktop={4} phone={12} tablet={12} className="card">
-            <img src="/assets/word_cloud.jpg" alt="word_cloud" width="100%" />
-            <p>WordCloud Title</p>
-            <p className="description">WordCloud description</p>
-          </GridCell>
-          <GridCell desktop={4} phone={12} tablet={12} className="card">
-            <img src="/assets/word_cloud.jpg" alt="word_cloud" width="100%" />
-            <p>WordCloud Title</p>
-            <p className="description">WordCloud description</p>
-          </GridCell>
-        </GridRow>
-      </Grid>
-    </div>
+    <Grid>
+      <GridRow>
+        <GridCell span={12}>
+          <h1>confviz</h1>
+          <p>
+            Statistics, Paper Links and Visualizations of Machine Learning
+            Conferences
+          </p>
+        </GridCell>
+      </GridRow>
+      <WordCloud data={data.conferences} />
+    </Grid>
   );
 };
 
