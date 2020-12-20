@@ -1,21 +1,13 @@
 import json
+import os
 
+
+dirname = os.path.dirname(__file__)
 acceptance_rates = []
 
 def load_acceptance_rate():
-	aaai_data = open('./data/AAAI/acceptance_rate.json', 'r')
-	acl_data = open('./data/ACL/acceptance_rate.json','r')
-	cvpr_data = open('./data/CVPR/acceptance_rate.json', 'r')
-	iclr_data = open('./data/ICLR/acceptance_rate.json','r')
-
-	aaai = json.load(aaai_data)
-	acl = json.load(acl_data)
-	cvpr = json.load(cvpr_data)
-	iclr = json.load(iclr_data)
-
-	acceptance_rates.append(aaai)
-	acceptance_rates.append(acl)
-	acceptance_rates.append(cvpr)
-	acceptance_rates.append(iclr)
+	for root, dirs, files in os.walk(os.path.join(dirname, '../data/'), topdown=False):
+		for name in dirs:
+			acceptance_rates.append(json.load(open(os.path.join(dirname, '../data/'+name+'/acceptance_rate.json'), 'r')))
 
 load_acceptance_rate()

@@ -1,21 +1,13 @@
 import json
+import os
 
+
+dirname = os.path.dirname(__file__)
 papers_list = []
 
 def load_papers():
-	aaai_data = open('./data/AAAI/papers.json', 'r')
-	acl_data = open('./data/ACL/papers.json','r')
-	cvpr_data = open('./data/CVPR/papers.json', 'r')
-	iclr_data = open('./data/ICLR/papers.json','r')
-
-	aaai = json.load(aaai_data)
-	acl = json.load(acl_data)
-	cvpr = json.load(cvpr_data)
-	iclr = json.load(iclr_data)
-
-	papers_list.append(aaai)
-	papers_list.append(acl)
-	papers_list.append(cvpr)
-	papers_list.append(iclr)
+	for root, dirs, files in os.walk(os.path.join(dirname, '../data/'), topdown=False):
+		for name in dirs:
+			papers_list.append(json.load(open(os.path.join(dirname, '../data/'+name+'/papers.json'), 'r')))
 	
 load_papers()
