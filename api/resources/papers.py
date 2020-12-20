@@ -1,6 +1,6 @@
 import json
 from flask_restful import Resource
-from models.papers import papers_list
+from api.models.papers import papers_list
 
 class AllPapers(Resource):
 	def get(self):

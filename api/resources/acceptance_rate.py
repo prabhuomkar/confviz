@@ -1,6 +1,6 @@
 import json
 from flask_restful import Resource
-from models.acceptance_rates import acceptance_rates
+from api.models.acceptance_rates import acceptance_rates
 
 class AcceptanceRates(Resource):
 	def get(self):

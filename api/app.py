@@ -2,10 +2,10 @@ import json
 from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
-from resources.conference import Conference, Conferences
-from resources.acceptance_rate import AcceptanceRate, AcceptanceRates
-from resources.keywords import AllKeywords, Keywords
-from resources.papers import AllPapers, Papers
+from api.resources.conference import Conference, Conferences
+from api.resources.acceptance_rate import AcceptanceRate, AcceptanceRates
+from api.resources.keywords import AllKeywords, Keywords
+from api.resources.papers import AllPapers, Papers
 
 app = Flask(__name__)
 api = Api(app)

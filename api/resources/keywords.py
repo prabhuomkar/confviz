@@ -1,6 +1,6 @@
 import json
 from flask_restful import Resource
-from models.keywords import keywords_list
+from api.models.keywords import keywords_list
 
 class AllKeywords(Resource):
 	def get(self):
