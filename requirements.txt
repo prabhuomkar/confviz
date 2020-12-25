@@ -1,13 +1,4 @@
-arxiv
-beautifulsoup4
-bs4
-gensim
-google
-jupyter
-matplotlib
-nltk
-notebook
-numpy
-requests
-tqdm
-urllib3
+Flask
+Flask_RESTful
+flask_cors
+uwsgi

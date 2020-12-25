@@ -1,6 +1,6 @@
 import json
 from flask_restful import Resource
-from models.conferences import conferences
+from api.models.conferences import conferences
 
 class Conferences(Resource):
 	def get(self):
