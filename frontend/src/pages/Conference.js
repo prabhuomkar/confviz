@@ -55,6 +55,7 @@ const Conference = ({ match }) => {
 
   useEffect(() => {
     fetchData(id);
+    setLoading(false);
   }, [id]);
 
   return (
