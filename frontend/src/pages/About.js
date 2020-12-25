@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <Grid>
-        <GridRow className="card-cell">
+        <GridRow className="card">
           <GridCell desktop={8} phone={7} tablet={8} align="middle">
             <h1>About</h1>
             <h2>
@@ -42,7 +42,7 @@ const About = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Joohong Lee's work
+                Joohong Lee&apos;s work
               </a>
               .
             </p>

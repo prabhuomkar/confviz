@@ -1,25 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Details = (props) => {
-  const { conf } = props;
+const Details = ({ data }) => {
+  const { id, name, description, image, website, event_date } = data;
   return (
     <div>
-      <h2>{conf.id}</h2>
-      <p>{conf.name}</p>
-      <p className="description">{conf.description}</p>
+      <img src={image} alt={id} width="120px" height="120px" />
+      <h2>{id}</h2>
+      <p>{name}</p>
+      <p className="description">{description}</p>
       <p>
-        Website :{" "}
-        <a
-          href={conf.website}
-          target="_blank"
-          rel="noreferrer"
-          className="link"
-        >
-          {conf.website}
+        Website:{" "}
+        <a href={website} target="_blank" rel="noreferrer" className="link">
+          {website}
         </a>
+        <p>
+          Date: <span className="link">{event_date}</span>
+        </p>
       </p>
     </div>
   );
+};
+
+Details.propTypes = {
+  data: PropTypes.string,
 };
 
 export default Details;

@@ -1,69 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { Drawer, DrawerSubtitle, DrawerContent } from "@rmwc/drawer";
 import { List, ListItem, ListDivider } from "@rmwc/list";
+import Support from "./Support";
+//import axios from "axios";
 import { Icon } from "@rmwc/icon";
 import "@rmwc/drawer/styles";
 import "@rmwc/list/styles";
-import "./SideNav.css";
-
-const sideNavItems = [
-  {
-    subtitle: "conferences",
-    items: [
-      {
-        id: 1,
-        name: "AAAI",
-        icon: "event",
-        link: "/AAAI",
-        class: "side-nav-icon"
-      },
-      {
-        id: 2,
-        name: "ACL",
-        icon: "event",
-        link: "/ACL",
-        class: "side-nav-icon"
-      },
-      {
-        id: 3,
-        name: "CVPR",
-        icon: "event",
-        link: "/CVPR",
-        class: "side-nav-icon"
-      },
-      {
-        id: 4,
-        name: "ICLR",
-        icon: "event",
-        link: "/ICLR",
-        class: "side-nav-icon"
-      }
-    ]
-  },
-  {
-    subtitle: "support",
-    items: [
-      {
-        id: 5,
-        name: "About Us",
-        icon: "info",
-        link: "/about",
-        class: "side-nav-icon"
-      },
-      {
-        id: 6,
-        name: "Contribute",
-        icon: "connect_without_contact",
-        link: "/contribute",
-        class: "side-nav-icon"
-      }
-    ]
-  }
-];
+import "./SideNav.scss";
 
 const SideNav = (props) => {
-  const { hide, open } = props;
+  const { hide, open, data } = props;
+
+  const sideNavItems = [
+    {
+      subtitle: "conferences",
+      items: data,
+    },
+  ];
+
   return (
     <Drawer dismissible open={open} className="drawer">
       <DrawerContent className="drawer-content">
@@ -79,22 +35,30 @@ const SideNav = (props) => {
                   className="nav-link"
                   activeClassName="activated"
                   exact
-                  to={item.link}
+                  to={item.id}
                   onClick={hide}
                 >
                   <ListItem disabled>
-                    <Icon className={item.class} icon={item.icon} />
-                    <span>{item.name}</span>
+                    <Icon className="side-nav-icon" icon="event" />
+                    <span>{item.id}</span>
                   </ListItem>
                 </NavLink>
               ))}
               <ListDivider />
             </div>
           ))}
+          <Support hide={hide} />
+          <ListDivider />
         </List>
       </DrawerContent>
     </Drawer>
   );
+};
+
+SideNav.propTypes = {
+  hide: PropTypes.func,
+  open: PropTypes.func,
+  data: PropTypes.array,
 };
 
 export default SideNav;

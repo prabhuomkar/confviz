@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Papers = (props) => {
-  const { title, authors, link } = props;
+const Papers = (paper) => {
+  const { title, authors, link } = paper;
   return (
     <div className="papers-card">
       <p>
@@ -15,6 +16,10 @@ const Papers = (props) => {
       </p>
     </div>
   );
+};
+
+Papers.propTypes = {
+  paper: PropTypes.string,
 };
 
 export default Papers;

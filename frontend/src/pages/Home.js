@@ -1,36 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { Grid, GridRow, GridCell } from "@rmwc/grid";
 import WordCloud from "../components/visualizations/WordCloud";
-import Loading from "../components/loading/Loading";
-import Error from "../components/error/Error";
-import axios from "axios";
-import useAxios from "axios-hooks";
 import "@rmwc/grid/styles";
 
-const Home = () => {
-  /*
-  const getData = async () => {
-    try {
-      const conferences = await axios.get(
-        "https://conference-viz-api.herokuapp.com/conferences"
-      );
-      console.log(conferences.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-  */
-  const [{ data, loading, error }] = useAxios(
-    "https://conference-viz-api.herokuapp.com/conferences"
-  );
-
-  if (loading) return <Loading />;
-  if (error) return <Error />;
-
+const Home = ({ data }) => {
   return (
     <Grid>
       <GridRow>
@@ -42,9 +16,13 @@ const Home = () => {
           </p>
         </GridCell>
       </GridRow>
-      <WordCloud data={data.conferences} />
+      <WordCloud data={data} />
     </Grid>
   );
+};
+
+Home.propTypes = {
+  data: PropTypes.array,
 };
 
 export default Home;

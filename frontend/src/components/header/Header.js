@@ -1,17 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   TopAppBar,
   TopAppBarRow,
   TopAppBarSection,
   TopAppBarTitle,
   TopAppBarFixedAdjust,
-  TopAppBarNavigationIcon
+  TopAppBarNavigationIcon,
 } from "@rmwc/top-app-bar";
 import { NavLink } from "react-router-dom";
 import "@rmwc/top-app-bar/styles";
 
-const Header = (props) => {
-  const { toggleSideNav } = props;
+const Header = ({ toggleSideNav }) => {
   return (
     <div>
       <TopAppBar className="top-app-bar" fixed>
@@ -30,6 +30,10 @@ const Header = (props) => {
       <TopAppBarFixedAdjust />
     </div>
   );
+};
+
+Header.propTypes = {
+  toggleSideNav: PropTypes.func,
 };
 
 export default Header;

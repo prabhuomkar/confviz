@@ -5,11 +5,15 @@ const Error = () => {
   return (
     <Grid>
       <GridRow>
-        <GridCell span={12} className="card">
+        <GridCell span={12}>
           <center>
-            <img src="/assets/error.svg" alt="loading" width="35%" />
-            <br />
-            Error occured :(
+            <img
+              src="/assets/error.svg"
+              alt="loading"
+              width="320px"
+              height="320px"
+            />
+            <p>Error occured :(</p>
           </center>
         </GridCell>
       </GridRow>

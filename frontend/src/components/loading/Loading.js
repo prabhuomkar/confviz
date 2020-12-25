@@ -2,7 +2,6 @@ import React from "react";
 import { Grid, GridCell, GridRow } from "@rmwc/grid";
 import { LinearProgress } from "@rmwc/linear-progress";
 import "@rmwc/linear-progress/styles";
-import "./Loading.css";
 
 const Loading = () => {
   return (

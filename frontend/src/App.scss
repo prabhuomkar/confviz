@@ -1,14 +1,23 @@
+$font: "Inter", sans-serif !important;
+$font-color: #000000;
+$link-color: #4c959a;
+$body-background-color: #e5e5e5;
+$card-background-color: #ffffff;
+$card-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter", sans-serif !important;
-  background-color: #e5e5e5;
+  font-family: $font;
+  background-color: $body-background-color;
+  color: $font-color;
 }
 
 body,
 span {
-  font-family: "Inter", sans-serif !important;
+  font-family: $font;
 }
 
 strong,
@@ -27,11 +36,12 @@ h5 {
 p {
   line-height: 24px;
   word-wrap: break-word;
+  color: $font-color;
 }
 
 .link {
   text-decoration: none;
-  color: #4c959a;
+  color: $link-color;
 }
 
 .top-app-bar {
@@ -41,7 +51,7 @@ p {
 .header-title {
   display: flex;
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff !important;
   align-content: space-between;
 }
 
@@ -51,10 +61,6 @@ p {
   margin: 2px 12px 0px 0px;
 }
 
-.typography {
-  font-size: 14px;
-}
-
 .icon {
   position: relative;
   font-size: 30px;
@@ -62,34 +68,46 @@ p {
   top: 6px;
 }
 
-.card-cell {
+/* cards */
+
+.card {
   border-radius: 6px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  background: #ffffff;
-  padding: 24px 20px;
+  box-shadow: $card-box-shadow;
+  background: $card-background-color;
+  padding: 18px 24px;
+}
+
+.word-cloud-card {
+  border-radius: 6px;
+  box-shadow: $card-box-shadow;
+  background: $card-background-color;
+  padding: 18px 18px 0px 18px;
 }
 
 .details-card {
   border-radius: 6px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  background: #ffffff;
-  padding: 0px 18px;
+  box-shadow: $card-box-shadow;
+  background: $card-background-color;
+  padding: 18px 18px;
 }
 
 .acceptance-rate-card {
   border-radius: 6px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  background: #ffffff;
-  padding: 24px 18px 24px 0px;
+  box-shadow: $card-box-shadow;
+  background: $card-background-color;
+  padding: 24px 18px 24px 8px;
+}
+
+.keywords-card {
+  border-radius: 6px;
+  box-shadow: $card-box-shadow;
+  background: $card-background-color;
+  padding: 24px 24px;
 }
 
 .papers-card {
   border-radius: 6px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: $card-box-shadow;
   background: #ffffff;
   margin-bottom: 12px;
   padding: 8px 16px;
@@ -100,9 +118,11 @@ p {
   color: rgba(0, 0, 0, 0.66);
 }
 
-@media only screen and (max-width: 600px) {
-  .recharts-responsive {
-    width: 100%;
-    height: "340px";
-  }
+/* loading */
+
+.loading {
+  width: 320px;
+}
+.mdc-linear-progress__bar-inner {
+  border-color: #4c959a !important;
 }
