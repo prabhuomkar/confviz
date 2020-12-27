@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { GridRow, GridCell } from "@rmwc/grid";
 import "@rmwc/card/styles";
-import { Link } from "react-router-dom";
 
 const WordCloud = ({ data }) => {
   return (

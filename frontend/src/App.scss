@@ -126,3 +126,13 @@ p {
 .mdc-linear-progress__bar-inner {
   border-color: #4c959a !important;
 }
+
+.image {
+  width: 18%;
+}
+
+@media only screen and (max-width: 620px) {
+  .image {
+    width: 36%;
+  }
+}

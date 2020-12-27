@@ -3,25 +3,22 @@ import PropTypes from "prop-types";
 import { Route, Switch } from "react-router-dom";
 import { DrawerAppContent } from "@rmwc/drawer";
 import Home from "../../pages/Home";
-import Conference from "../../pages/Conference";
 import About from "../../pages/About";
-import getConferences from "../../getConferences";
+import Conference from "../../pages/Conference";
+import FetchConferences from "../../fetch/FetchConferences";
+import SideNav from "../sidenav/SideNav";
 import Loading from "../loading/Loading";
 import Error from "../error/Error";
-import SideNav from "../sidenav/SideNav";
 
 const Content = (props) => {
   const { open, toggle } = props;
-  const { data, error, loading } = getConferences(
+  const { data, error, loading } = FetchConferences(
     "https://confviz.herokuapp.com/conferences"
   );
 
-  if (error) {
-    return <Error />;
-  }
-  if (!loading) {
-    return <Loading />;
-  }
+  if (error) return <Error />;
+  if (loading) return <Loading />;
+
   return (
     <div>
       <SideNav hide={toggle} open={open} data={data} />
@@ -29,7 +26,6 @@ const Content = (props) => {
         <Switch>
           <Route exact path="/" component={() => <Home data={data} />} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/:id" component={Conference} />
           <Route
             path="/contribute"
             component={() => {
@@ -37,6 +33,7 @@ const Content = (props) => {
                 "https://github.com/prabhuomkar/conference-viz";
             }}
           />
+          <Route exact path="/:id" component={Conference} />
         </Switch>
       </DrawerAppContent>
     </div>

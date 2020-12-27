@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const getConferencesDetails = (id, url) => {
+const FetchConferences = (url) => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -11,17 +11,17 @@ const getConferencesDetails = (id, url) => {
       await axios
         .get(url)
         .then((response) => {
-          setLoading(true);
-          setData(response.data);
+          setData(response.data.conferences);
+          setLoading(false);
         })
         .catch((error) => {
           setError(error);
         });
     };
     fetchData();
-  }, [id, url]);
+  }, [url]);
 
   return { error, loading, data };
 };
 
-export default getConferencesDetails;
+export default FetchConferences;

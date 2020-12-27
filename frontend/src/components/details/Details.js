@@ -5,7 +5,7 @@ const Details = ({ data }) => {
   const { id, name, description, image, website, event_date } = data;
   return (
     <div>
-      <img src={image} alt={id} width="120px" height="120px" />
+      <img src={image} alt={id} className="image" />
       <h2>{id}</h2>
       <p>{name}</p>
       <p className="description">{description}</p>
